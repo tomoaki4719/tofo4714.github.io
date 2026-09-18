@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOMOAKI SATO | Web Designer & Frontend Engineer</title>
+<meta name="description" content="Webデザイナー / フロントエンドエンジニアのポートフォリオサイト。制作実績とお問い合わせ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="loader" id="loader">
+  <div class="loader-mark">T<span>/</span>S</div>
+  <div class="loader-count"><span id="loaderPct">0</span>%</div>
+  <div class="loader-bar"><span id="loaderBar"></span></div>
+</div>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<header class="header" id="siteHeader">
+  <a href="#top" class="logo magnetic" data-cursor="hover">
+    <span class="logo-mark">T/S</span>
+  </a>
+
+  <nav class="nav" aria-label="Main navigation">
+    <a href="#top" data-nav="top" class="nav-link">
+      <span class="nav-index">01</span>Top
+    </a>
+    <a href="#works" data-nav="works" class="nav-link">
+      <span class="nav-index">02</span>Works
+    </a>
+    <a href="#about" data-nav="about" class="nav-link">
+      <span class="nav-index">03</span>About
+    </a>
+  </nav>
+
+  <a href="#about" class="btn btn-ghost header-cta magnetic" data-cursor="hover">お問い合わせ</a>
+
+  <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#top" data-nav="top">Top</a>
+  <a href="#works" data-nav="works">Works</a>
+  <a href="#about" data-nav="about">About</a>
+</div>
+
+<main>
+
+  <section id="top" class="hero">
+    <canvas id="orb" class="hero-canvas"></canvas>
+
+    <div class="hero-inner">
+      <p class="hero-eyebrow reveal-line">Web Designer&nbsp;/&nbsp;Frontend Engineer</p>
+      <h1 class="hero-title" id="heroTitle" data-split>TOMOAKI SATO</h1>
+      <p class="hero-desc reveal-line">
+        デザインとコード、両方の視点でWebをかたちにする。<br>
+        見た目の美しさと、動きの気持ちよさにこだわった制作をしています。
+      </p>
+      <div class="hero-cta reveal-line">
+        <a href="#works" class="btn btn-primary magnetic" data-cursor="hover">
+          <span>Works を見る</span>
+        </a>
+        <a href="#about" class="btn btn-outline magnetic" data-cursor="hover">
+          <span>お問い合わせ</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span class="scroll-line"></span>
+      <span class="scroll-text">Scroll</span>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>WEB DESIGN</span><span class="dot">・</span>
+      <span>FRONTEND ENGINEERING</span><span class="dot">・</span>
+      <span>UI / UX</span><span class="dot">・</span>
+      <span>CREATIVE CODING</span><span class="dot">・</span>
+      <span>WEB DESIGN</span><span class="dot">・</span>
+      <span>FRONTEND ENGINEERING</span><span class="dot">・</span>
+      <span>UI / UX</span><span class="dot">・</span>
+      <span>CREATIVE CODING</span><span class="dot">・</span>
+    </div>
+  </div>
+
+  <section id="works" class="works">
+    <div class="section-head">
+      <span class="section-num reveal">02</span>
+      <h2 class="reveal">Works</h2>
+      <p class="reveal">デザインと実装、両方を担当した制作実績を掲載しています。</p>
+    </div>
+
+    <div class="filter reveal">
+      <button type="button" class="filter-btn is-active" data-filter="all">All</button>
+      <button type="button" class="filter-btn" data-filter="design">Web Design</button>
+      <button type="button" class="filter-btn" data-filter="frontend">Frontend</button>
+    </div>
+
+    <div class="works-grid" id="worksGrid">
+
+      <article class="work-card reveal" data-category="design frontend">
+        <a href="#" class="work-link" data-cursor="view">
+          <div class="work-thumb grad-1">
+            <span class="work-thumb-label">01</span>
+          </div>
+          <div class="work-body">
+            <div class="work-meta">
+              <span class="work-tag">Web Design</span>
+              <span class="work-tag">Frontend</span>
+            </div>
+            <h3>Aurora Studio</h3>
+            <p>クリエイティブスタジオのブランドサイト。デザインからコーディングまで一貫して担当。</p>
+          </div>
+          <span class="work-arrow" aria-hidden="true">↗</span>
+        </a>
+      </article>
+
+      <article class="work-card reveal" data-category="frontend">
+        <a href="#" class="work-link" data-cursor="view">
+          <div class="work-thumb grad-2">
+            <span class="work-thumb-label">02</span>
+          </div>
+          <div class="work-body">
+            <div class="work-meta">
+              <span class="work-tag">Frontend</span>
+            </div>
+            <h3>Nozomi Dashboard</h3>
+            <p>データ可視化ダッシュボードの実装。React + D3.jsでインタラクティブなUIを構築。</p>
+          </div>
+          <span class="work-arrow" aria-hidden="true">↗</span>
+        </a>
+      </article>
+
+      <article class="work-card reveal" data-category="design">
+        <a href="#" class="work-link" data-cursor="view">
+          <div class="work-thumb grad-3">
+            <span class="work-thumb-label">03</span>
+          </div>
+          <div class="work-body">
+            <div class="work-meta">
+              <span class="work-tag">Web Design</span>
+            </div>
+            <h3>Kioku Magazine</h3>
+            <p>Webマガジンのビジュアルデザイン。エディトリアルな余白とタイポグラフィを意識。</p>
+          </div>
+          <span class="work-arrow" aria-hidden="true">↗</span>
+        </a>
+      </article>
+
+      <article class="work-card reveal" data-category="design frontend">
+        <a href="#" class="work-link" data-cursor="view">
+          <div class="work-thumb grad-4">
+            <span class="work-thumb-label">04</span>
+          </div>
+          <div class="work-body">
+            <div class="work-meta">
+              <span class="work-tag">Web Design</span>
+              <span class="work-tag">Frontend</span>
+            </div>
+            <h3>Hanare Hotel</h3>
+            <p>宿泊施設のコーポレートサイト。スクロールに連動したアニメーションを実装。</p>
+          </div>
+          <span class="work-arrow" aria-hidden="true">↗</span>
+        </a>
+      </article>
+
+      <article class="work-card reveal" data-category="frontend">
+        <a href="#" class="work-link" data-cursor="view">
+          <div class="work-thumb grad-5">
+            <span class="work-thumb-label">05</span>
+          </div>
+          <div class="work-body">
+            <div class="work-meta">
+              <span class="work-tag">Frontend</span>
+            </div>
+            <h3>Playground Lab</h3>
+            <p>Canvas / WebGLを使った実験的なインタラクションコレクション。</p>
+          </div>
+          <span class="work-arrow" aria-hidden="true">↗</span>
+        </a>
+      </article>
+
+      <article class="work-card reveal" data-category="design">
+        <a href="#" class="work-link" data-cursor="view">
+          <div class="work-thumb grad-6">
+            <span class="work-thumb-label">06</span>
+          </div>
+          <div class="work-body">
+            <div class="work-meta">
+              <span class="work-tag">Web Design</span>
+            </div>
+            <h3>Marginal Coffee</h3>
+            <p>カフェブランドのロゴ・グラフィック・Webサイトのトータルデザイン。</p>
+          </div>
+          <span class="work-arrow" aria-hidden="true">↗</span>
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="section-head">
+      <span class="section-num reveal">03</span>
+      <h2 class="reveal">About</h2>
+      <p class="reveal">プロフィールとスキル、お問い合わせはこちらから。</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-profile reveal">
+        <div class="about-photo">
+          <span>T/S</span>
+        </div>
+        <h3>TOMOAKI SATO</h3>
+        <p class="about-role">Web Designer / Frontend Engineer</p>
+        <p class="about-text">
+          デザインの学習からキャリアをスタートし、現在はUIデザインとフロントエンド実装の両方を担当しています。
+          見た目の美しさだけでなく、使い心地や動きの気持ちよさまで含めて「良いWebサイト」だと考え、
+          細部までこだわった制作を心がけています。
+        </p>
+
+        <ul class="stats">
+          <li>
+            <span class="stat-num" data-count="6">0</span><span class="stat-suffix">+</span>
+            <small>Years Experience</small>
+          </li>
+          <li>
+            <span class="stat-num" data-count="10">0</span><span class="stat-suffix">+</span>
+            <small>Projects</small>
+          </li>
+          <!-- <li>
+            <span class="stat-num" data-count="12">0</span><span class="stat-suffix"></span>
+            <small>Awards</small>
+          </li> -->
+        </ul>
+
+        <div class="skills">
+          <div class="skill">
+            <div class="skill-head"><span>HTML / CSS</span><span class="skill-pct">100%</span></div>
+            <div class="skill-bar"><span class="skill-fill" data-level="100"></span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-head"><span>Photoshop</span><span class="skill-pct">90%</span></div>
+            <div class="skill-bar"><span class="skill-fill" data-level="90"></span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-head"><span>illustlator</span><span class="skill-pct">90%</span></div>
+            <div class="skill-bar"><span class="skill-fill" data-level="90"></span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-head"><span>JavaScript</span><span class="skill-pct">80%</span></div>
+            <div class="skill-bar"><span class="skill-fill" data-level="80"></span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-head"><span>UI Design (Figma)</span><span class="skill-pct">60%</span></div>
+            <div class="skill-bar"><span class="skill-fill" data-level="60"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-contact reveal">
+        <h3>Contact</h3>
+        <p class="contact-lead">お仕事のご相談・ご依頼、その他お問い合わせはこちらのフォームからお気軽にどうぞ。</p>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="field">
+            <input type="text" id="name" name="name" placeholder=" " required autocomplete="name">
+            <label for="name">お名前</label>
+            <span class="field-error" data-error-for="name">お名前を入力してください</span>
+          </div>
+
+          <div class="field">
+            <input type="email" id="email" name="email" placeholder=" " required autocomplete="email">
+            <label for="email">メールアドレス</label>
+            <span class="field-error" data-error-for="email">正しいメールアドレスを入力してください</span>
+          </div>
+
+          <div class="field">
+            <input type="text" id="subject" name="subject" placeholder=" " autocomplete="off">
+            <label for="subject">件名</label>
+          </div>
+
+          <div class="field">
+            <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+            <label for="message">メッセージ</label>
+            <span class="field-error" data-error-for="message">メッセージを入力してください</span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit magnetic" data-cursor="hover">
+            <span class="btn-label">送信する</span>
+            <span class="btn-loading" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <p class="direct-email">
+          または直接メールする：
+          <a href="mailto:cityfor0104@gmail.com" id="directMail">cityfor0104@gmail.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-top">
+    <p class="footer-title">Let's create<br>something together.</p>
+    <a href="#about" class="btn btn-outline btn-invert magnetic" data-cursor="hover"><span>お問い合わせ</span></a>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> TOMOAKI SATO. All rights reserved.</p>
+    <div class="socials">
+      <a href="#" target="_blank" rel="noopener" data-cursor="hover">X</a>
+      <a href="#" target="_blank" rel="noopener" data-cursor="hover">GitHub</a>
+      <a href="#" target="_blank" rel="noopener" data-cursor="hover">Instagram</a>
+    </div>
+    <a href="#top" class="to-top magnetic" data-cursor="hover">↑ Top</a>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
