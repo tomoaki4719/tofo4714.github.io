@@ -6,6 +6,7 @@
   const isTouch = window.matchMedia('(hover:none), (pointer:coarse)').matches;
 
   document.addEventListener('DOMContentLoaded', () => {
+    initWorksGrid(); // must run before initCursor/initReveal so generated cards are bound
     initLoader();
     initCursor();
     initHeader();
@@ -19,7 +20,8 @@
     initStats();
     initSkillBars();
     initContactForm();
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
   });
 
   /* ------------------------------------------------------------------ */
@@ -405,6 +407,34 @@
   function normalize(v) {
     const len = Math.sqrt(v[0] * v[0] + v[1] * v[1] + v[2] * v[2]);
     return [v[0] / len, v[1] / len, v[2] / len];
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* Works grid — rendered from js/works-data.js                         */
+  /* ------------------------------------------------------------------ */
+  function workTagsHtml(tags) {
+    return tags.map((t) => `<span class="work-tag">${t}</span>`).join('');
+  }
+
+  function initWorksGrid() {
+    const grid = document.getElementById('worksGrid');
+    if (!grid || typeof WORKS === 'undefined') return;
+
+    grid.innerHTML = WORKS.map((w) => `
+      <article class="work-card reveal" data-category="${w.category.join(' ')}">
+        <a href="works/detail.html?work=${encodeURIComponent(w.slug)}" class="work-link" data-cursor="view">
+          <div class="work-thumb ${w.thumb}">
+            <span class="work-thumb-label">${w.num}</span>
+          </div>
+          <div class="work-body">
+            <div class="work-meta">${workTagsHtml(w.positions)}</div>
+            <h3>${w.title}</h3>
+            <p>${w.summary}</p>
+          </div>
+          <span class="work-arrow" aria-hidden="true">↗</span>
+        </a>
+      </article>
+    `).join('');
   }
 
   /* ------------------------------------------------------------------ */

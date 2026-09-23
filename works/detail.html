@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work | YOUR NAME</title>
+<meta name="description" content="制作実績の詳細ページ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<a id="pageTop"></a>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<header class="header" id="siteHeader">
+  <a href="../index.html#top" class="logo magnetic" data-cursor="hover">
+    <span class="logo-mark">Y/N</span>
+  </a>
+
+  <nav class="nav" aria-label="Main navigation">
+    <a href="../index.html#top" class="nav-link">
+      <span class="nav-index">01</span>Top
+    </a>
+    <a href="../index.html#works" class="nav-link is-active">
+      <span class="nav-index">02</span>Works
+    </a>
+    <a href="../index.html#about" class="nav-link">
+      <span class="nav-index">03</span>About
+    </a>
+  </nav>
+
+  <a href="../index.html#about" class="btn btn-ghost header-cta magnetic" data-cursor="hover">お問い合わせ</a>
+
+  <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="../index.html#top">Top</a>
+  <a href="../index.html#works">Works</a>
+  <a href="../index.html#about">About</a>
+</div>
+
+<main class="work-detail" id="workDetailRoot">
+  <!-- Rendered by js/detail.js based on the ?work= slug -->
+</main>
+
+<footer class="footer">
+  <div class="footer-top">
+    <p class="footer-title">Let's create<br>something together.</p>
+    <a href="../index.html#about" class="btn btn-outline btn-invert magnetic" data-cursor="hover"><span>お問い合わせ</span></a>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> YOUR NAME. All rights reserved.</p>
+    <div class="socials">
+      <a href="#" target="_blank" rel="noopener" data-cursor="hover">X</a>
+      <a href="#" target="_blank" rel="noopener" data-cursor="hover">GitHub</a>
+      <a href="#" target="_blank" rel="noopener" data-cursor="hover">Instagram</a>
+    </div>
+    <a href="#pageTop" class="to-top magnetic" data-cursor="hover">↑ Top</a>
+  </div>
+</footer>
+
+<script src="../js/works-data.js"></script>
+<script src="../js/detail.js"></script>
+<script src="../js/main.js" defer></script>
+</body>
+</html>
