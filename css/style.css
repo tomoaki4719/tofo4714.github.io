@@ -789,7 +789,7 @@
   }
   
   .detail-body{
-    max-width:760px;
+    max-width:1000px;
     margin:0 auto;
     padding:72px clamp(20px,5vw,56px) 40px;
   }
@@ -803,9 +803,10 @@
     margin-bottom:16px;
   }
   .detail-head h1{
-    font-size:clamp(32px,5.5vw,56px);
+    font-size:clamp(32px,5.5vw,45px);
     letter-spacing:-.02em;
     margin-bottom:22px;
+    line-height: 2.7rem;
   }
   .detail-link{
     display:inline-flex; align-items:center; gap:10px;
@@ -832,7 +833,6 @@
   .detail-desc p{
     color:var(--muted);
     margin-top:14px;
-    max-width:640px;
   }
   .detail-row{
     display:flex; flex-wrap:wrap; align-items:baseline; gap:16px 28px;
