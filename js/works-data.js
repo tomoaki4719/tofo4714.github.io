@@ -5,15 +5,15 @@
  */
 const WORKS = [
   {
-    slug: 'aurora-studio',
-    title: 'Aurora Studio',
+    slug: 'jozankei-view-hotel-sauna',
+    title: '定山渓ビューホテル／サウナページ',
     category: ['design', 'frontend'],
     positions: ['Web Design', 'Frontend'],
-    tools: ['Figma', 'HTML / CSS', 'JavaScript', 'GSAP'],
-    url: 'https://example.com/aurora-studio',
-    period: '2025.04 - 2025.06',
-    summary: 'クリエイティブスタジオのブランドサイト。デザインからコーディングまで一貫して担当。',
-    description: 'クリエイティブスタジオのコーポレートサイトを、デザインからフロントエンド実装まで一貫して担当しました。ブランドの世界観を伝えるため、スクロールに連動したアニメーションや繊細なタイポグラフィにこだわって制作しています。',
+    tools: ['Photoshop', 'HTML / CSS', 'JavaScript'],
+    url: 'https://www.jozankeiview.com/sauna/',
+    period: '2024.05 - 2024.07',
+    summary: '定山渓ビューホテルのサウナページ。デザインからコーディングまで一貫して担当。',
+    description: '2024年7月と12月に館内施設のサウナがリニューアルするため、既存のサウナページのサイトリニューアルを行いました。2種類のコンセプトに分かれたサウナそれぞれの魅力訴求を目的としたデザインに取り組みました。',
     thumb: 'grad-1',
     num: '01',
   },
