@@ -308,7 +308,7 @@
     margin-bottom:22px;
   }
   .hero-title{
-    font-size:clamp(50px,10vw,111px);
+    font-size:clamp(44px,10vw,111px);
     letter-spacing:-.03em;
     margin-bottom:26px;
     mix-blend-mode:multiply;
