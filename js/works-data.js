@@ -69,17 +69,4 @@ const WORKS = [
     thumb: 'grad-5',
     num: '05',
   },
-  {
-    slug: 'marginal-coffee',
-    title: 'Marginal Coffee',
-    category: ['design'],
-    positions: ['Web Design'],
-    tools: ['Figma', 'Illustrator', 'Photoshop'],
-    url: 'https://example.com/marginal-coffee',
-    period: '2024.01 - 2024.03',
-    summary: 'カフェブランドのロゴ・グラフィック・Webサイトのトータルデザイン。',
-    description: 'カフェブランドの立ち上げに合わせて、ロゴ・グラフィックツール・Webサイトのトータルデザインを担当しました。ナチュラルで親しみやすいブランドイメージを、一貫したビジュアルで表現しています。',
-    thumb: 'grad-6',
-    num: '06',
-  },
 ];
