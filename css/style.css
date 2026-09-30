@@ -379,14 +379,9 @@
     font-family:var(--font-display);
     font-weight:700;
     font-size:clamp(20px,3.4vw,34px);
-    animation:marquee 28s linear infinite;
     will-change:transform;
   }
   .marquee-track .dot{ color:var(--accent-2); margin:0 .3em; }
-  @keyframes marquee{
-    from{ transform:translateX(0); }
-    to{ transform:translateX(-50%); }
-  }
   
   /* ==========================================================================
      Section shared
