@@ -464,13 +464,13 @@
   .work-link{
     position:relative;
     display:block;
-    padding:40px;
+    padding:clamp(15px, 3vw, 40px);
     height:100%;
     overflow:hidden;
   }
   .work-thumb{
     position:relative;
-    height:220px;
+    height:clamp(150px, 27vw, 220px);
     margin-bottom:28px;
     border-radius:4px;
     overflow:hidden;
@@ -507,7 +507,7 @@
     color:var(--muted);
   }
   .work-body h3{
-    font-size:22px;
+    font-size:20px;
     margin-bottom:10px;
     transition:color .3s ease;
   }
@@ -764,18 +764,20 @@
   .work-detail{ padding-top:var(--header-h); }
   
   .detail-mv{
-    position:relative;
-    width:100%;
-    height:clamp(320px, 56vw, 620px);
-    overflow:hidden;
+    position: relative;
+    width: 100%;
+    height: clamp(210px, 56vw, 680px);
+    overflow: hidden;
+    padding: clamp(0px, 5vw, 130px);
   }
   .detail-mv-inner{
-    position:relative;
-    width:100%; height:100%;
-    display:flex; align-items:flex-end; justify-content:flex-end;
-    padding:32px;
-    animation:mvZoom 16s ease-in-out infinite alternate;
-  }
+    position: relative;
+    width: 100%;
+    height: clamp(190px, 27vw, 425px);
+    margin-bottom: 28px;
+    border-radius: 4px;
+    overflow: hidden;
+}
   @keyframes mvZoom{
     from{ transform:scale(1); }
     to{ transform:scale(1.08); }
@@ -783,14 +785,17 @@
   .detail-mv-label{
     font-family:var(--font-mono);
     font-size:clamp(48px,8vw,96px);
-    color:rgba(255,255,255,.35);
+    color:#9d00ff;
     line-height:1;
+    position: absolute;
+    right: 16px;
+    bottom: 12px;
   }
   
   .detail-body{
     max-width:1000px;
     margin:0 auto;
-    padding:72px clamp(20px,5vw,56px) 40px;
+    padding:clamp(20px,5vw,72px) clamp(20px,5vw,56px) 40px;
   }
   .detail-head{ margin-bottom:48px; }
   .detail-eyebrow{
@@ -882,7 +887,7 @@
     border:1px solid var(--line);
   }
   .related-grid .work-link{ padding:28px; }
-  .related-grid .work-thumb{ height:160px; margin-bottom:20px; }
+  .related-grid .work-thumb{ height:140px; margin-bottom:20px; }
   .related-grid .work-body h3{ font-size:18px; }
   .related-grid .work-arrow{ top:24px; right:24px; width:34px; height:34px; }
   

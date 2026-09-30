@@ -35,7 +35,8 @@
   function detailTemplate(w) {
     return `
       <section class="detail-mv reveal">
-        <div class="detail-mv-inner ${w.thumb}">
+        <div class="detail-mv-inner">
+          <p class="${w.thumb}"></p>
           <span class="detail-mv-label">${w.num}</span>
         </div>
       </section>
