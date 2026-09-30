@@ -35,7 +35,8 @@
   function detailTemplate(w) {
     return `
       <section class="detail-mv reveal">
-        <div class="detail-mv-inner ${w.thumb}">
+        <div class="detail-mv-inner">
+          <p class="${w.thumb}"></p>
           <span class="detail-mv-label">${w.num}</span>
         </div>
       </section>
@@ -92,7 +93,8 @@
     return `
       <article class="work-card reveal">
         <a href="detail.html?work=${encodeURIComponent(w.slug)}" class="work-link" data-cursor="view">
-          <div class="work-thumb ${w.thumb}">
+          <div class="work-thumb">
+            <p class="${w.thumb}"></p>
             <span class="work-thumb-label">${w.num}</span>
           </div>
           <div class="work-body">
